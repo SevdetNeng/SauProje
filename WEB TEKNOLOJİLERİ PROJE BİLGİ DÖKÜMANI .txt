@@ -1,0 +1,13 @@
+Sakarya Üniversitesi Web Teknolojileri Dersi 1.Ödev (PROJE BİLGİ DÖKÜMANI)
+Öğrenci Adı=Sevdet IŞIK
+Öğrenci Numarası=G191210082
+2.Öğretim B Grubu
+
+Projede doğup yaşamımı sürdürdüğüm şehir olan İstanbul'u tanıtan ve kendim hakkında da
+kişisel bir takım bilgiler(eğitim,kısa bir özgeçmiş vb.) bulunan bir web sitesi tasarlanacaktır.
+Sitede kişisel bilgilerimin bulunduğu bir hakkında kısmı,İstanbul'un tarihinin kısa özetinin 
+resimlerle desteklenerek anlatıldığı,şehirle alakalı önemli mekanların tanıtıldığı Şehrim başlıklı bir kısım bulunacak.
+Sayfada kullanıcı giriş bölümü ve bu kullanıcılara benimle iletişim kurabilecekleri
+yerleri anlatan bir iletişim kısmı bulunacaktır.
+
+
