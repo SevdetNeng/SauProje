@@ -1,0 +1,17 @@
+
+
+
+/* Site arkaplan resmi ayarlaması */
+body{
+    
+   background: url(../images/yeni.jpg) no-repeat center center fixed ;
+    background-size:cover;
+}
+
+/*Containerların arkaplanı beyaz yapıldı */
+.icerik{
+    background:white;
+    
+}
+
+
