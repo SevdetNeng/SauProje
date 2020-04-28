@@ -8,13 +8,21 @@ body{
     background-size:cover;
 }
 
-/*Containerların arkaplanı beyaz yapıldı */
+/*icerik container'ının arkaplanı beyaz yapıldı */
 .icerik{
     background:white;
     
+    
 }
+.row{
+    align-items:center;
+}
+/*Footer'ın arkaplan rengi siyah yapıldı. */
 .page-footer{
     background:black;
+}
+.table{
+    background:white;
 }
 
 
