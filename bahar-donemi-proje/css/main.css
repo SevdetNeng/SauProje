@@ -4,25 +4,56 @@
 /* Site arkaplan resmi ayarlaması */
 body{
     
-   background: url(../images/yeni.jpg) no-repeat center center fixed ;
+    background: url(../images/background/yeni.jpg) no-repeat  center fixed ;
     background-size:cover;
+    font-family:'BioRhyme';
 }
 
 /*icerik container'ının arkaplanı beyaz yapıldı */
-.icerik{
+.container.icerik,.container.mekanlar{
     background:white;
     
     
 }
-.row{
+.row {
     align-items:center;
 }
 /*Footer'ın arkaplan rengi siyah yapıldı. */
 .page-footer{
     background:black;
 }
+
 .table{
     background:white;
 }
 
 
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  padding-bottom: 65%;
+    
+}
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.metin{
+    color:black;
+    
+}
+
+.footer-text{
+    color:white;
+}
+
+.row.kisisel,.row.egitim,.row.iletisim,.row.hobi,.row.yabanci,.row.tarihi-ist,.row.cards,.row.sultanahmetresim,.row.sultanahmet ,.row.kizkulesiresim,.sultanahmet-text,.kizkulesi-text,.taksim-text,.taksimresim,.eyup-text,.eyupresim{
+    justify-content:center;
+}
+.card{
+    width:18rem;
+}
