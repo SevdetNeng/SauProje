@@ -4,10 +4,10 @@
 <head>
     <!-- BioRyhme fontu eklendi. -->
     <link href='https://fonts.googleapis.com/css?family=BioRhyme' rel='stylesheet'>
-    
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <!-- Bootstrap ve main css dosyası linklendi -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    
+
     <a name="navbar"></a>
 
     <!-- Menü tasarımı yapıldı -->
@@ -51,82 +51,89 @@
 
             <img src="images/logos/hakkinda.png" class=" img-fluid rounded mx-auto d-block" alt="logo" width="500" height="500">
         </div>
-    </div> 
+    </div>
+    <div class="container">
+        <form action="" method="post" name="GirisFormu">
+            <table width="400" border="0" align="center" cellpadding="10" class="Table">
+
+                <tr>
+                    <td colspan="2" align="left" valign="top">
+                        <h3>Kullanıcı Girişi</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" valign="top">E-Mail</td>
+                    <td><input name="inputKullaniciAdi" type="text" class="Input"></td>
+                </tr>
+                <tr>
+                    <td align="right">Şifre</td>
+                    <td><input name="inputSifre" type="password" class="Input"></td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td><input name="giris" type="submit" value="Giriş Yap" class="Button3"></td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td align="left">
+                        <p style="color:red" id="hata"></p>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div><br><br><br>
+
+
+    <?php session_start();
     
-    <!-- Sayfanın içerik kısmının tasarımı -->
-    <div class="metin">
-        <div class="container icerik">
-            <div class="row">
-                <div>
-                    <div class="col">
-                        <br><img src="images/hakkinda/istanbul1.jpg" class=" img-fluid rounded mx-auto d-block" width="340" height="320">
-                    </div>
-                </div>
+    /* Eğer Giriş Yap butonuna tıklanırsa if bloğuna giriliyor.*/
+        if(isset($_POST['giris'])){
+            
+            /* Kullanıcı giriş bilgilerini içeren dizi */
+            $bilgiler = array('g191210082@ogr.sakarya.edu.tr' => '123');
+
+            /* kullaniciAdi değişkenine eğer girildiyse kullaniciAdi inputu veriliyor. */
+            $kullaniciAdi = isset($_POST['inputKullaniciAdi']) ? $_POST['inputKullaniciAdi'] : '';
+            
+            /* sifre değişkenine eğer girildiyse sifre inputu veriliyor. */
+            $sifre = isset($_POST['inputSifre']) ? $_POST['inputSifre'] : '';
+            
+            
+            /* eğer bilgiler dizisinde girilen kullanıcı adı varsa ve şifreyle eşleşiyorsa if  bloğuna giriliyor. */
+            if (isset($bilgiler[$kullaniciAdi]) && $bilgiler[$kullaniciAdi] == $sifre){
                 
-                <div class="col ">
-                    <h3>
-                        <br>
-                        KİMİM BEN?
-                    </h3>
-                    <h6>
-                        <p>Adım Sevdet.1999 yılında İstanbul'un Gaziosmanpaşa ilçesinde doğdum.İlk ve ortaokulu burada okudum.Liseyi ise sultangazide okudum.Şu anda ise Sakarya Üniversitesi'nde eğitim görmekteyim.</p>
-                    </h6>
-                </div>
-                <div>
-                    <div class="col ">
-                        <br><img src="images/hakkinda/education1.jpg" class=" img-fluid rounded mx-auto d-block" width="340" height="320">
-                    </div>
+                $_SESSION['KullaniciBilgisi']['KullaniciAdi']=$bilgiler[$kullaniciAdi]; 
+  
+                
+                /* Ekrana hoşgeldizin mesajını çıkartan fonksiyon */
+                /* girilen email bilgisi @ değerinden itibaren iki string'e ayrılıyor. */
+                /* Ayrılan dizinin 0'ıncı indexli elemanı isim olarak alınıyor. */
+                /* Daha sonra javascript ile birlikte ekrana mesaj çıkartılıp ana sayfaya dönüp dönmeme sorgusu yapılıyor.*/
+                function function_hosgeldin($username) {
+                    $userArray = explode("@", $username);
+                    $user = $userArray[0];
+                    echo '<script>if (confirm("Hoşgeldiniz, '.$user.'\nAnasayfaya dönmek ister misiniz? ")) {
+                      window.location.replace("index.html");
+                   } else {
+                      window.location.replace("login.php");
+                   };</script>';
+                } 
+  
+  
+                /* input olarak verilen kullanıcı adı üstte tanımlanan fonksiyona veriliyor. */
+                function_hosgeldin($kullaniciAdi); 
+                    exit;
+                } 
+            
+                /* eğer kullanıcı bilgilerinden en az biri yanlış girilirse ekrana hatalı giriş uyarısı çıkartılıyor.*/
+                else {
+                      echo '<script>
+                             document.getElementById("hata").innerHTML = "Hatalı Giriş Yaptınız.";
+                           </script>'; 
+                }
+        }
 
-
-                </div>
-
-
-
-            </div>
-            <div class="row">
-                <div>
-                    <div class="col ">
-                        <br><img src="images/hakkinda/fishing1.png" class=" img-fluid rounded mx-auto d-block" width="340" height="320">
-                    </div>
-                </div>
-                <div class="col  ">
-                    <h3>
-                        <br>
-                        HOBİLERİM
-                    </h3>
-                    <h6>
-                        <p>Bilgisayar mühendisliği okumak hep hayalimdi.Durum böyle olunca da bilgisayarla pek içli dışlıyım.Video oyunu oynamaktan,oyunlarla alakalı içeriklere göz atmaktan zevk alıyorum.Aynı zamanda yüzmek,arkadaşlarımla vakit geçirmek,balık tutmak en büyük hobilerimdendir.</p>
-                    </h6>
-                </div>
-                <div>
-                    <div class="col">
-                        <br><img src="images/hakkinda/swimming1.png" class="  rounded mx-auto d-block" width="290" height="280">
-                    </div>
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col">
-                    <br><img src="images/hakkinda/hedef3.jpg" class="  rounded mx-auto d-block" width="280" height="280">
-                </div>
-                <div class="col">
-                    <h3>
-                        <br>
-                        HEDEFLERİM
-                    </h3>
-                    <h6>
-                        <p>Çocukluğumdan beri hep bilgisayar mühendisi olmayı hayal ettim.Şu anda bu hayalimi gerçekleştirmeye çok yakınım.Ben bu hayale bilgisayarda vakit geçirmeyi çok sevdiğimden tutulmuştum,ancak bilgisayar mühendisliğinde işler öyle kolay değil.Bir sürü alana ayrılan ana bir meslekten kendime en uygun alanı keşfetmem gerek.Bu alanı keşfettikten sonra o alanda kendimi uzmanlaştırmalıyım.Okulun bana katacağı çok şey olsa da,bir o kadar belki de daha fazla şeyi ben kendime katmalıyım.Bu yüzden ilk hedefim mesleğimde kendimi geliştirmek,mesleğin hangi alanında bulunacağımı keşfetmektir.İleri dönük başka bir hedefimse tek bir alana bağlı kalmaksızın başka alanlarla da ilgilenmek,bilgi sahibi olmak.Meslek dışında kendimi hiçbir zaman sosyallikten uzaklaştırmamalı,yeni insanlar keşfetmekten,yeni mekanlar gezmekten vazgeçmemeliyim.</p>
-                    </h6>
-                    <br>
-
-                </div>
-
-            </div><br>
-
-
-
-        </div>
-    </div><br>
+?>
 
     <!-- Sayfanın en altına kişisel linkler ve bilgiler barındıran footer eklendi -->
     <footer class="page-footer font-small black">

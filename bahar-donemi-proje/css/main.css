@@ -10,7 +10,7 @@ body{
 }
 
 /*icerik container'ının arkaplanı beyaz yapıldı */
-.container.icerik,.container.mekanlar, .container.miras,.container.giris{
+.container.icerik,.container.mekanlar, .container.miras{
     background:white;
     
     
