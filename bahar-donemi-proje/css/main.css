@@ -10,13 +10,14 @@ body{
 }
 
 /*icerik container'ının arkaplanı beyaz yapıldı */
-.container.icerik,.container.mekanlar{
+.container.icerik,.container.mekanlar, .container.miras,.container.giris{
     background:white;
     
     
 }
 .row {
     align-items:center;
+    justify-content:center;
 }
 /*Footer'ın arkaplan rengi siyah yapıldı. */
 .page-footer{
@@ -51,9 +52,12 @@ body{
     color:white;
 }
 
-.row.kisisel,.row.egitim,.row.iletisim,.row.hobi,.row.yabanci,.row.tarihi-ist,.row.cards,.row.sultanahmetresim,.row.sultanahmet ,.row.kizkulesiresim,.sultanahmet-text,.kizkulesi-text,.taksim-text,.taksimresim,.eyup-text,.eyupresim{
-    justify-content:center;
-}
+
 .card{
     width:18rem;
+} 
+
+.card.hisar{
+    width:30rem;
+    
 }
