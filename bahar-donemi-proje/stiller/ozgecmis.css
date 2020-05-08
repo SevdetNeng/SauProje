@@ -1,0 +1,36 @@
+/* Site arkaplan resmi ve fontu ayarlaması */
+body {
+
+    background: url(../images/background/yeni.jpg) no-repeat center fixed;
+    background-size: cover;
+    font-family: 'BioRhyme';
+   
+
+
+}
+
+/* Bilgilerin gözüktüğü container'ın arkaplanı beyaz,yazı tipi italic yapıldı. */
+.table {
+    background: white;
+    font-style: italic;
+}
+
+/* h3 heading'inin yazı kalınlığı bold yapıldı. */
+h3 {
+    font-weight: bold;
+}
+
+
+
+/* Satırlarda bulunan her şey center'a hizalandı */
+.row {
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*Footer'ın arkaplan rengi siyah yapıldı. */
+.page-footer {
+    background: black;
+}

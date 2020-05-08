@@ -1,0 +1,38 @@
+/* Sayfanın body kısmının arka plan fotoğrafı ve font stili tanımlandı. */
+
+body {
+
+    background: url(../images/background/yeni.jpg) no-repeat center fixed;
+    background-size: cover;
+    font-family: 'BioRhyme';
+   
+   
+}
+
+/*Heading'lerdeki yazı stili italic olarak belirlendi*/
+h1,h2,h4,h5 {
+    font-style: italic;
+}
+
+/* h1 ve h2 headinglerinin yazı kalınlığı bold yapıldı. */
+h1,h2 {
+    font-weight: bold;
+}
+
+/*Footer'ın arkaplan rengi siyah yapıldı. */
+.page-footer {
+    background: black;
+}
+
+/* Bilgilerin gözüktüğü container'ın arkaplanı beyaz yapıldı. */
+.table {
+    background: white;
+}
+
+
+
+/* Satırlarda bulunan her şey center'a hizalandı. */
+.row {
+    align-items: center;
+    justify-content: center;
+}

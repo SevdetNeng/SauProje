@@ -1,0 +1,75 @@
+
+
+/* Site arkaplan resmi ayarlaması */
+body {
+
+    background: url(../images/background/yeni.jpg) no-repeat center fixed;
+    background-size: cover;
+    font-family: 'BioRhyme';
+   
+
+
+}
+
+
+/*icerik container'ının arkaplanı beyaz yapıldı */
+.container.icerik,
+.container.mekanlar,
+.container.miras {
+    background: white;
+
+
+}
+
+/* Satırlardaki her şey center'a hizalandı */
+.row {
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*Footer'ın arkaplan rengi siyah yapıldı. */
+.page-footer {
+    background: black;
+}
+
+.table {
+    background: white;
+}
+
+
+/* Slider'ın iç classının stil ayarlaması yapıldı */
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    padding-bottom: 65%;
+
+}
+
+/* Slider resimlerinin stil ayarlaması yapıldı */
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* metin class'ının arkaplanı siyah yapıldı */
+.metin {
+    color: black;
+
+}
+
+
+/* Sehrim sayfasında bulunan card'ların genişliği ayarlandı. */ 
+.card {
+    width: 18rem;
+}
+
+
+
+
+
+
+
+

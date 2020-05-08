@@ -1,0 +1,37 @@
+
+/* Site arkaplan resmi ve fontu ayarlandı */
+body {
+
+    background: url(../images/background/yeni.jpg) no-repeat center fixed;
+    background-size: cover;
+    font-family: 'BioRhyme';
+   
+
+
+}
+
+/* hr bloğunun arkaplan rengi beyaz yapıldı. */
+hr{
+    background:white;
+}
+
+/* iletisim-form class'ının stili ayarlandı. */
+.iletisim-form{
+    
+    color:white;
+    background:rgba(0,0,0,.6);
+    margin-top:100px;
+    padding:20px;
+    box-shadow:0px 0px 10px 3px grey;
+}
+
+/* Footer'ın arkaplan rengi siyah yapıldı */
+.page-footer {
+    background: black;
+}
+
+/* Satırlardaki her şey center'a hizalandı */
+.row {
+    align-items: center;
+    justify-content: center;
+}
